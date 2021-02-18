@@ -220,6 +220,7 @@ class WaveWidget extends StatefulWidget {
   final bool isLoop;
 
   WaveWidget({
+    Key key,
     @required this.config,
     @required this.size,
     this.waveAmplitude = 20.0,
@@ -230,7 +231,7 @@ class WaveWidget extends StatefulWidget {
     this.backgroundColor,
     this.backgroundImage,
     this.isLoop = true,
-  });
+  }) : super(key: key);
 
   @override
   State<StatefulWidget> createState() => _WaveWidgetState();
